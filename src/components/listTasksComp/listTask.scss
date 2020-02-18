@@ -1,0 +1,173 @@
+.list-task{
+  width: 800px;
+  margin: 35px auto;
+  box-shadow: 0 0 10px #f1f1f1;
+  border-radius: 5px;
+  font-size: 15px;
+
+  button{
+    outline: none;
+    border: 0;
+    background: transparent;
+  }
+
+  svg{
+    height: 28px;
+    color: black;
+
+    &:hover{
+      cursor: pointer;
+      color: #757575;
+    }
+    &:active{
+      cursor: pointer;
+    }
+  }   
+
+  .head-tasks{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    h1{
+      font-size: 27px;
+      font-weight: 600;
+    } 
+  }
+
+  .table-task{
+    table{
+      width: 100%;
+      text-align: center;
+      table-layout: fixed;
+      border-spacing: 0;
+
+      button{
+        border: 1px dashed rgba(128, 128, 128, 0.5);
+        border-radius: 3px;
+        height: 30px;
+
+        span{
+          margin: 15px;
+          font-weight: 600;
+        }
+
+        &:hover{
+          border: 1px solid rgba(128, 128, 128, 1);
+        }
+      }
+      
+      .active-button{
+        border: 1px solid rgba(128, 128, 128, 1);
+        display: inline-flex;
+        span{
+          margin: 4px 0 0 10px;
+
+        }
+
+        svg{
+          height: 22px;
+          margin: 1px 5px 0 0;
+          color: rgba(128, 128, 128, 1);
+        }
+
+        &:hover{
+          svg{
+            color: black;
+          }
+        }
+      }
+
+      td:not(:last-child){
+        overflow: hidden;
+        border-right: 1px solid rgba(201, 201, 201, 0.1);
+      }
+      th, td{
+        border-bottom: 1px solid rgba(201, 201, 201, 0.1);
+      }
+
+      .user-col{
+        width: 23%;
+        padding: 7px 5px;
+      }
+      .email-col{
+        width: 23%;
+        padding: 7px 5px;
+      }
+      .text-col{
+        width: 30%;
+        padding: 7px 5px;
+
+        svg:hover, i:hover{
+          cursor: text;
+        }
+      } 
+      .status-col{
+        width: 12%;
+        padding: 7px 5px;
+        
+        svg:hover{
+          color: black;
+          cursor: default;
+        }
+      }
+      .admin-col{
+        width: 12%;
+        padding: 7px 5px;
+      }
+
+      .text-info-change{
+        margin: 6px auto 2px auto;
+        font-size: 13px;
+        color: #adadec;
+        i{
+          margin-bottom: 2px;
+        }
+        svg{
+          margin-bottom: -2px;
+          color: #adadec;
+          height: 14px;
+        }
+      }
+    }
+
+    .buttons-page{
+      text-align: center;
+      padding: 5px;
+
+      button{
+        margin: 2px;
+        padding: 2px 2px 0 2px;
+
+        &:hover{
+          padding: 2px 2px  0 1px;
+          span{
+            font-size: 17px;
+          }
+        }
+      }
+      
+      span{
+        font-size: 15px;
+      }
+
+      .dots{
+        font-weight: 600;
+      }
+
+      .active-page{
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        span{
+          font-size: 19px;
+        }
+        &:hover{
+          padding: 2px 2px 0 2px;
+          span{
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}
